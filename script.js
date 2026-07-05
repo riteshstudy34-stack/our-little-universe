@@ -30,8 +30,10 @@ sh.style.animationDelay=(Math.random()*5)+"s";
 document.body.appendChild(sh);
 }
 
-// ✨ Button Effect
-const btn=document.getElementById("enterBtn");
+// 💖 Button Effect (Only if button exists)
+const btn = document.getElementById("enterBtn");
+
+if(btn){
 
 btn.addEventListener("click",()=>{
 
@@ -42,13 +44,9 @@ let heart=document.createElement("div");
 heart.innerHTML="💖";
 
 heart.style.position="fixed";
-
 heart.style.left=(window.innerWidth/2)+"px";
-
 heart.style.top=(window.innerHeight/2)+"px";
-
 heart.style.fontSize="25px";
-
 heart.style.transition="1s";
 
 document.body.appendChild(heart);
@@ -74,6 +72,15 @@ window.location.href="letter.html";
 },800);
 
 });
+
+}
+
+// ❤️ Love Timer (Only on final page)
+
+const timer = document.getElementById("loveTimer");
+
+if(timer){
+
 const startDate = new Date("2026-05-05T00:00:00");
 
 function updateLoveTimer(){
@@ -90,21 +97,17 @@ const minutes = Math.floor((diff/(1000*60))%60);
 
 const seconds = Math.floor((diff/1000)%60);
 
-const timer=document.getElementById("loveTimer");
-
-if(timer){
-
-timer.innerHTML=
-
-`❤️ ${days} Days<br>
+timer.innerHTML = `
+❤️ ${days} Days<br>
 🕒 ${hours} Hours<br>
 ⏰ ${minutes} Minutes<br>
-✨ ${seconds} Seconds`;
+✨ ${seconds} Seconds
+`;
 
 }
 
-}
+updateLoveTimer();
 
 setInterval(updateLoveTimer,1000);
 
-updateLoveTimer();
+}
