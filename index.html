@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,13 @@
 
 <body>
 
+<!-- 🎵 Background Music -->
+<audio id="bgMusic" loop>
+    <source src="Khat Navjot Ahuja (pagalall.com).mp3" type="audio/mpeg">
+</audio>
+
 <div class="card">
+
 <h1>Our Little Universe ❤️</h1>
 
 <h2>Ritesh ❤️ Mahima</h2>
@@ -22,33 +29,12 @@ No matter where life takes us...<br>
 I'll still choose you.
 </p>
 
-<button onclick="window.location.href='letter.html'">
+<button id="enterBtn" onclick="window.location.href='letter.html'">
     Enter Our World ✨
 </button>
+
 </div>
 
-<script>
+<script src="script.js"></script>
 
-for(let i=0;i<150;i++){
-let s=document.createElement("div");
-s.className="star";
-s.style.left=Math.random()*100+"vw";
-s.style.top=Math.random()*100+"vh";
-s.style.animationDelay=Math.random()*2+"s";
-document.body.appendChild(s);
-}
-
-for(let i=0;i<35;i++){
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML="❤️";
-h.style.left=Math.random()*100+"vw";
-h.style.animationDuration=(5+Math.random()*5)+"s";
-h.style.fontSize=(15+Math.random()*20)+"px";
-document.body.appendChild(h);
-}
-
-</script>
-
-</body>
-</html>
+</
